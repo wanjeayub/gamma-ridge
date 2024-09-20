@@ -23,7 +23,7 @@ mongoose
   });
 
 // path resolution
-const __dirname = path.resolve();
+var __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
