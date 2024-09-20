@@ -13,7 +13,7 @@ function AdminRegister() {
     const token = localStorage.getItem("token"); // Admin's token for authorization
 
     try {
-      const response = await fetch("http://localhost:5000/admin/register", {
+      const response = await fetch("/admin/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

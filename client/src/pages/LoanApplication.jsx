@@ -11,7 +11,7 @@ function LoanApplication() {
     e.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:5000/loan/apply-loan", {
+      const response = await fetch("/loan/apply-loan", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
