@@ -25,6 +25,7 @@ mongoose
 
 // path resolution
 // proces.cwd()
+// new comment
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
