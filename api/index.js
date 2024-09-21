@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const path = require("path");
+var __dirname = path.resolve();
 
 // imports
 const authRoutes = require("./routes/auth.route.js");
@@ -23,7 +24,7 @@ mongoose
   });
 
 // path resolution
-var __dirname = path.resolve();
+
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
