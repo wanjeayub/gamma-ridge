@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const path = require("path");
 
-
 // imports
 const authRoutes = require("./routes/auth.route.js");
 const loanRoutes = require("./routes/loan.route.js");
@@ -25,11 +24,12 @@ mongoose
   });
 
 // path resolution
+// proces.cwd()
 
-app.use(express.static(path.join(process.cwd(), "/client/dist")));
+app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "client", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
 // Routes
