@@ -34,6 +34,13 @@ function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-md">
+        <div>
+          <h1>Welcome to Gammaridge</h1>
+          <p>
+            We offer a variety of services for your need. To continue, register
+            or login below
+          </p>
+        </div>
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={handleLogin}
