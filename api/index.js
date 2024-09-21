@@ -25,7 +25,7 @@ mongoose
 
 // path resolution
 
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(process.cwd(), "/client/dist")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(process.cwd(), "client", "dist", "index.html"));
