@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const path = require("path");
-var __dirname = path.resolve();
+
 
 // imports
 const authRoutes = require("./routes/auth.route.js");
@@ -11,6 +11,7 @@ const loanRoutes = require("./routes/loan.route.js");
 const adminRoutes = require("./routes/admin.route.js");
 
 const app = express();
+var __dirname = path.resolve();
 app.use(cors());
 app.use(express.json());
 
