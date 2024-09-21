@@ -37,9 +37,6 @@ app.get("*", (req, res) => {
 app.use("/auth", authRoutes);
 app.use("/loan", loanRoutes);
 app.use("/admin", adminRoutes);
-app.use("/", (req, res) => {
-  res.status(200).json({ message: "app running okay" });
-});
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");

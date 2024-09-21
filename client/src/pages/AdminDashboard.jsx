@@ -6,7 +6,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchUsers = async () => {
       const token = localStorage.getItem("token");
-      const response = await fetch("/admin/users", {
+      const response = await fetch("/admin/loans", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -21,7 +21,7 @@ function AdminDashboard() {
 
   const handleLoanDecision = async (loanId, decision) => {
     const token = localStorage.getItem("token");
-    const response = await fetch(`/admin/loan/${loanId}`, {
+    const response = await fetch(`/admin/loans/${loanId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
