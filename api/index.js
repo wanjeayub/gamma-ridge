@@ -27,10 +27,10 @@ mongoose
 // proces.cwd()
 // new comment
 
-app.use(express.static(__dirname + "/client/dist"));
+app.use(express.static(path.join(__dirname + "/client/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/client" + "/dist" + "/index.html");
+  res.sendFile(__dirname + "client" + "dist" + "index.html");
 });
 
 // Routes
