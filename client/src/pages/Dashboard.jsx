@@ -14,7 +14,8 @@ function Dashboard() {
 
       if (response.ok) {
         const data = await response.json();
-        setLoans(data);
+        console.log(data.data);
+        setLoans(data.data);
       }
     };
     fetchLoans();
